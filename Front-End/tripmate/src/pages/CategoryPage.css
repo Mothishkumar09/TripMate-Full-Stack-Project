@@ -1,0 +1,170 @@
+/* ================= PAGE ================= */
+.category-page {
+  padding: 50px 60px;
+  min-height: 100vh;
+  background-image: url("https://www.pikpng.com/pngl/b/45-455724_1175-x-313-8-transparent-travel-border-design.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================= TITLE ================= */
+.section-title {
+  font-size: 34px;
+  text-align: center;
+  color: #1f3c88;
+  font-weight: 800;
+  margin: 40px 0 25px;
+  letter-spacing: 0.8px;
+}
+
+/* ================= SLICK WRAPPER ================= */
+.slick-slider {
+  margin: 0 auto 20px;
+  width: 78%;
+}
+
+.slick-slide {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= ARROWS ================= */
+.slick-prev,
+.slick-next {
+  width: 44px;
+  height: 44px;
+  z-index: 10;
+  background: #000;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 26px;
+  color: #fff;
+  opacity: 1;
+}
+
+.slick-prev {
+  left: -55px;
+}
+
+.slick-next {
+  right: -55px;
+}
+
+/* ================= DOTS ================= */
+.slick-dots {
+  margin-top: 15px;
+}
+
+.slick-dots li button:before {
+  font-size: 11px;
+  color: #999;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+/* ================= CARD ================= */
+.place-card {
+  position: relative;
+  width: 220px;
+  height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* ================= IMAGE ================= */
+.place-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.place-card:hover img {
+  transform: scale(1.07);
+}
+
+/* ================= NAME OVERLAY ================= */
+.place-card p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 14px 12px;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.25),
+    transparent
+  );
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .slick-slider {
+    width: 85%;
+  }
+
+  .place-card {
+    width: 200px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-page {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .place-card {
+    width: 180px;
+    height: 320px;
+  }
+
+  .slick-prev {
+    left: -40px;
+  }
+
+  .slick-next {
+    right: -40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-card {
+    width: 150px;
+    height: 280px;
+  }
+
+  .place-card p {
+    font-size: 15px;
+  }
+}

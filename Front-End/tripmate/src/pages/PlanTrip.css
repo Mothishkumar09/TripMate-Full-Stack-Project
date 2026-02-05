@@ -1,0 +1,151 @@
+/* Glassmorphism & Modern Layout */
+.plan-trip {
+  max-width: 1050px;
+  margin: 60px auto;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.plan-trip h2 {
+  text-align: center;
+  font-size: 38px;
+  background: linear-gradient(135deg, #1f3c88 0%, #4f8cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Grid System */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.form-grid label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #444;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+/* Input Styles with Glow Effect */
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 15px;
+  border: 1.5px solid #e0e6ed;
+  background: #fcfdfe;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  outline: none;
+  border-color: #4f8cff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.15);
+}
+
+/* Button Group Styling */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 15px 45px;
+  background: linear-gradient(135deg, #1f3c88, #4f8cff);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 10px 20px rgba(31, 60, 136, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(31, 60, 136, 0.3);
+  filter: brightness(1.1);
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: #1f3c88;
+  border: 2px solid #1f3c88;
+  box-shadow: none;
+}
+
+.btn.secondary:hover {
+  background: #f0f4ff;
+}
+
+/* Result Card */
+.result {
+  margin-top: 40px;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  border-radius: 20px;
+  border-left: 6px solid #1f3c88;
+  animation: slideUp 0.5s ease-out;
+}
+
+.result p {
+  margin: 10px 0;
+  font-size: 17px;
+  color: #2c3e50;
+}
+
+.result b {
+  color: #1f3c88;
+}
+
+/* Success & Error Badges */
+.success, .error {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .plan-trip { padding: 25px; margin: 20px; }
+  .btn-group { flex-direction: column; }
+  .btn { width: 100%; }
+}

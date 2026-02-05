@@ -1,0 +1,109 @@
+/* ================= PAGE ================= */
+.place-details {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================= TITLE ================= */
+.place-details h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #1f3c88;
+  font-weight: 800;
+}
+
+/* ================= SECTIONS ================= */
+.place-details section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eef2ff;
+}
+
+.place-details section:last-child {
+  border-bottom: none;
+}
+
+/* Section headings */
+.place-details h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+  color: #111827;
+  position: relative;
+}
+
+.place-details h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  display: block;
+  margin-top: 6px;
+  border-radius: 5px;
+}
+
+/* ================= TEXT ================= */
+.place-details p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ================= LISTS ================= */
+.place-details ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.place-details ul li {
+  background: #f8fafc;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #111827;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease;
+}
+
+.place-details ul li:hover {
+  transform: translateX(6px);
+}
+
+/* ================= BUDGET HIGHLIGHT ================= */
+.place-details section:nth-of-type(3) p {
+  background: linear-gradient(135deg, #ecfeff, #f0f9ff);
+  padding: 18px 20px;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0f172a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .place-details {
+    padding: 25px 20px;
+    margin: 20px;
+  }
+
+  .place-details h2 {
+    font-size: 32px;
+  }
+
+  .place-details h3 {
+    font-size: 20px;
+  }
+
+  .place-details p,
+  .place-details ul li {
+    font-size: 15px;
+  }
+}
